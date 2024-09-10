@@ -11,4 +11,5 @@ func main() {
 
 	fmt.Println(miTarea)
 
+	fmt.Println("listo! para empezar")
 }
