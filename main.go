@@ -1,15 +1,18 @@
 package main
 
 import (
-	"fmt"
+	"mimod/models"
 	"mimod/util"
 )
 
 func main() {
 
+	milista := []models.Tarea{}
+
 	miTarea := util.Entradas()
 
-	fmt.Println(miTarea)
+	milista = append(milista, miTarea)
 
-	fmt.Println("listo! para empezar")
+	util.Listar(milista)
+
 }
