@@ -11,6 +11,4 @@ func main() {
 
 	fmt.Println(miTarea)
 
-	fmt.Println("hola")
-
 }
