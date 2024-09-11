@@ -16,6 +16,7 @@ func main() {
 
 	//iteración hasta la opción de salida.
 	for {
+		util.Listar(milista)
 		switch util.Menu() {
 		case 1:
 			milista = util.Agregar(milista)
@@ -26,6 +27,8 @@ func main() {
 		case 4:
 			milista = util.Remover(milista)
 		case 5:
+			util.Editar(milista)
+		case 6:
 			fmt.Println("Hasta pronto!")
 			return
 		default:
