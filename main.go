@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"mimod/models"
 	"mimod/util"
 )
@@ -13,18 +14,21 @@ func main() {
 		{Title: "Levantarse 2", Description: "5 minutos mas...", Completed: false},
 		{Title: "Levantarse 3", Description: "5 minutos mas...", Completed: false}}
 
-	//crea una nueva tarea para posterior agregarla al listado.
-	//miTarea := util.Entradas()
-
-	//agrega nueva tarea a la lista.
-	//milista = append(milista, miTarea)
-
-	//lista todas las tareas
-	util.Listar(milista)
-
-	//marca como completado una tarea
-	milista = util.Completada(milista)
-
-	util.Listar(milista)
+	//iteración hasta la opción de salida.
+	for {
+		switch util.Menu() {
+		case 1:
+			milista = util.Agregar(milista)
+		case 2:
+			util.Listar(milista)
+		case 3:
+			milista = util.Completada(milista)
+		case 4:
+			fmt.Println("Hasta pronto!")
+			return
+		default:
+			fmt.Println("Opción invalida")
+		}
+	}
 
 }
