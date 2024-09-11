@@ -10,33 +10,33 @@ import (
 
 func Agregar(lista []models.Tarea) []models.Tarea {
 
-	//instancia para leer la entrada del usuario
+	//Instancia para leer la entrada del usuario
 	reader := bufio.NewReader(os.Stdin)
 
-	fmt.Println("Ingrese el titulo de la tarea: ")
+	fmt.Println("Ingrese el título de la tarea: ")
 
-	//lee la entrada del usuario
+	//Lee la entrada del usuario
 	title, _ := reader.ReadString('\n')
 
-	//borra los espacios de la entrada
+	//Quita los espacios vacíos de la entrada
 	title = strings.TrimSpace(title)
 
 	fmt.Println("Ingrese una descripción: ")
 
-	//lee la entrada del usuario
+	//Lee la entrada del usuario
 	description, _ := reader.ReadString('\n')
 
-	//borra los espacios de la entrada
-	description = strings.TrimSpace(description) //para borrar espacios antes y despues
+	//Quita los espacios de la entrada
+	description = strings.TrimSpace(description)
 
-	//crea una instancia de tarea
+	//Crea una instancia de tarea
 	nuevaTarea := models.Tarea{
 		Title:       title,
 		Description: description,
 		Completed:   false,
 	}
 
-	//retorna la lista con la nueva tarea agregada
+	//Retorna la lista con la nueva tarea agregada
 	return append(lista, nuevaTarea)
 
 }

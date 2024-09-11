@@ -12,21 +12,21 @@ import (
 
 func Completada(lista []models.Tarea) []models.Tarea {
 
-	//instancia del lector
+	//Instancia para leer la entrada del usuario
 	reader := bufio.NewReader(os.Stdin)
 
-	fmt.Println("Ingresa el indice de la tarea completada: ")
+	fmt.Println("Ingresa el índice de la tarea completada: ")
 
-	//lee la entrada del usuario
+	//Lee la entrada del usuario
 	entrada, _ := reader.ReadString('\n')
 
-	//limpia la entrada de espacios vacios
+	//limpia la entrada de espacios vacíos
 	entrada = strings.TrimSpace(entrada)
 
-	//convierte el string a int
+	//Convierte el string a int
 	indice, _ := strconv.Atoi(entrada)
 
-	//marca la tarea como completada
+	//Marca la tarea como completada
 	lista[indice].Completed = true
 
 	return lista

@@ -11,21 +11,21 @@ import (
 
 func Editar(lista []models.Tarea) []models.Tarea {
 
-	//instancia del lector
+	//Instancia para leer la entrada del usuario
 	reader := bufio.NewReader(os.Stdin)
 
-	fmt.Println("Ingresa el indice de la tarea que deseas actualizar: ")
+	fmt.Println("Ingresa el índice de la tarea que deseas actualizar: ")
 
 	//lee la entrada del usuario
 	entrada, _ := reader.ReadString('\n')
 
-	//limpia la entrada de espacios vacios
+	//limpia la entrada de espacios vacíos
 	entrada = strings.TrimSpace(entrada)
 
 	//convierte el string a int
 	indice, _ := strconv.Atoi(entrada)
 
-	fmt.Println("Ingrese el titulo de la tarea: ")
+	fmt.Println("Ingrese el título de la tarea: ")
 
 	//lee la entrada del usuario
 	title, _ := reader.ReadString('\n')

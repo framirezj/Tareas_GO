@@ -27,7 +27,7 @@ Seleccione una opción:`)
 	//leer la entrada de usuario
 	entrada, _ := reader.ReadString('\n')
 
-	//borra los espacios antes y despues de la entrada
+	//borra los espacios antes y después de la entrada
 	entrada = strings.TrimSpace(entrada)
 
 	//convierte la entrada string a int
