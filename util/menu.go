@@ -19,7 +19,8 @@ Menú:
 1. Agregar Tarea
 2. Listar Tareas
 3. Marcar Tarea Completada
-4. Salir
+4. Remover Tarea
+5. Salir
 Seleccione una opción:`)
 
 	//leer la entrada de usuario

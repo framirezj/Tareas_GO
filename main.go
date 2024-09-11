@@ -24,6 +24,8 @@ func main() {
 		case 3:
 			milista = util.Completada(milista)
 		case 4:
+			milista = util.Remover(milista)
+		case 5:
 			fmt.Println("Hasta pronto!")
 			return
 		default:
