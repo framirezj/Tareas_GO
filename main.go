@@ -16,8 +16,11 @@ func main() {
 
 	//Itera hasta la opción de salida.
 	for {
+
 		util.ListarTareas(tareas)
-		switch util.Menu() {
+		opcion := util.Menu()
+
+		switch opcion {
 		case 1:
 			tareas = util.AgregarTarea(tareas)
 		case 2:
