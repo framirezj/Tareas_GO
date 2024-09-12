@@ -21,7 +21,7 @@ Menú:
 3. Marcar Tarea Completada
 4. Remover Tarea
 5. Actualizar Tarea
-6. Guarda las tareas en un archivo Json
+6. Exporta las Tareas a Json
 7. Salir
 Seleccione una opción:`)
 

@@ -2,7 +2,7 @@ package models
 
 // Struct para tarea
 type Tarea struct {
-	Title       string
-	Description string
-	Completed   bool
+	Title       string `json: "title"`
+	Description string `json: "description"`
+	Completed   bool   `json: "completed"`
 }

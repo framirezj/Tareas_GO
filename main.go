@@ -9,10 +9,10 @@ import (
 func main() {
 
 	//lista principal
-	tareas := []models.Tarea{
-		{Title: "Levantarse", Description: "5 minutos más...", Completed: false},
-		{Title: "Levantarse 2", Description: "5 minutos más...", Completed: false},
-		{Title: "Levantarse 3", Description: "5 minutos más...", Completed: false}}
+	tareas := []models.Tarea{}
+
+	//cargar la lista de tareas desde el json que actua como bd
+	util.TareasDesdeJson(&tareas)
 
 	//Itera hasta la opción de salida.
 	for {
@@ -39,6 +39,8 @@ func main() {
 		default:
 			fmt.Println("Opción inválida")
 		}
+
+		util.TareasAJson(tareas)
 	}
 
 }

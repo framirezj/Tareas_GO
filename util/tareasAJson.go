@@ -5,22 +5,13 @@ import (
 	"fmt"
 	"mimod/models"
 	"os"
-	"time"
 )
 
 // guarda un archivo json con las tareas
 func TareasAJson(tareas []models.Tarea) error {
 
 	//crea y define el nombre del archivo
-	//el formato del archivo sera ejemplo: archivo-fechahora.json
-
-	fechaHora := time.Now()
-	formatoFechaHora := fechaHora.Format("2006-01-02_15-04-05")
-
-	nombreArchivo := fmt.Sprintf("archivo-%s.json", formatoFechaHora)
-
-	//crea el archivo vacio con el nombre previamente definido
-	archivo, err := os.Create(nombreArchivo)
+	archivo, err := os.Create("tareas_go.json")
 
 	//manejo de errores al crear el archivo
 	if err != nil {
