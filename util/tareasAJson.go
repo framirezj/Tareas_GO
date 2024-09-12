@@ -19,6 +19,8 @@ func TareasAJson(tareas []models.Tarea) error {
 		return err
 	}
 
+	defer archivo.Close()
+
 	//prapara el archivo para poder escribir en el.
 	encoder := json.NewEncoder(archivo)
 
@@ -29,8 +31,7 @@ func TareasAJson(tareas []models.Tarea) error {
 		return err
 	}
 
-	//si esta todo ok cerramos y retornamos
-	archivo.Close()
+	//si esta todo ok retornamos
 	return nil
 
 }

@@ -15,6 +15,8 @@ func TareasDesdeJson(tareas *[]models.Tarea) error {
 		return err
 	}
 
+	defer archivo.Close()
+
 	decoder := json.NewDecoder(archivo)
 
 	err = decoder.Decode(tareas)
@@ -23,7 +25,6 @@ func TareasDesdeJson(tareas *[]models.Tarea) error {
 		return err
 	}
 
-	archivo.Close()
 	return nil
 
 }
