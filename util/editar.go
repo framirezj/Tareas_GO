@@ -45,7 +45,7 @@ func Editar(lista []models.Tarea) []models.Tarea {
 	tarea := models.Tarea{
 		Title:       title,
 		Description: description,
-		Completed:   true,
+		Completed:   false,
 	}
 
 	lista[indice] = tarea
