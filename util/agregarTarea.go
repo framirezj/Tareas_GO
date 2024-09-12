@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func Agregar(lista []models.Tarea) []models.Tarea {
+func AgregarTarea(lista []models.Tarea) []models.Tarea {
 
 	//Instancia para leer la entrada del usuario
 	reader := bufio.NewReader(os.Stdin)

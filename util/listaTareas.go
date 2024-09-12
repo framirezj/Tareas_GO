@@ -5,7 +5,7 @@ import (
 	"mimod/models"
 )
 
-func Listar(lista []models.Tarea) {
+func ListarTareas(lista []models.Tarea) {
 
 	fmt.Println("\n###############")
 	fmt.Println("Lista de Tareas")

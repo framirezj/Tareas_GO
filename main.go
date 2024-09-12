@@ -16,18 +16,18 @@ func main() {
 
 	//Itera hasta la opción de salida.
 	for {
-		util.Listar(tareas)
+		util.ListarTareas(tareas)
 		switch util.Menu() {
 		case 1:
-			tareas = util.Agregar(tareas)
+			tareas = util.AgregarTarea(tareas)
 		case 2:
-			util.Listar(tareas)
+			util.ListarTareas(tareas)
 		case 3:
-			tareas = util.Completada(tareas)
+			tareas = util.CompletarTarea(tareas)
 		case 4:
-			tareas = util.Remover(tareas)
+			tareas = util.RemoverTarea(tareas)
 		case 5:
-			util.Editar(tareas)
+			util.EditarTarea(tareas)
 		case 6:
 			fmt.Println("Hasta pronto!")
 			return

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-func Remover(lista []models.Tarea) []models.Tarea {
+func RemoverTarea(lista []models.Tarea) []models.Tarea {
 
 	//instancia del lector
 	reader := bufio.NewReader(os.Stdin)

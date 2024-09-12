@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-func Editar(lista []models.Tarea) []models.Tarea {
+func EditarTarea(lista []models.Tarea) []models.Tarea {
 
 	//Instancia para leer la entrada del usuario
 	reader := bufio.NewReader(os.Stdin)

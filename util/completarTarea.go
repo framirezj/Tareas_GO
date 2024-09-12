@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-func Completada(lista []models.Tarea) []models.Tarea {
+func CompletarTarea(lista []models.Tarea) []models.Tarea {
 
 	//Instancia para leer la entrada del usuario
 	reader := bufio.NewReader(os.Stdin)
