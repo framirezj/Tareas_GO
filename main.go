@@ -32,6 +32,8 @@ func main() {
 		case 5:
 			util.EditarTarea(tareas)
 		case 6:
+			util.TareasAJson(tareas)
+		case 7:
 			fmt.Println("Hasta pronto!")
 			return
 		default:

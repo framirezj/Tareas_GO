@@ -21,7 +21,8 @@ Menú:
 3. Marcar Tarea Completada
 4. Remover Tarea
 5. Actualizar Tarea
-6. Salir
+6. Guarda las tareas en un archivo Json
+7. Salir
 Seleccione una opción:`)
 
 	//leer la entrada de usuario
