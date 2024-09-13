@@ -1,33 +1,26 @@
 package util
 
 import (
-	"bufio"
 	"fmt"
 	"mimod/models"
-	"os"
-	"strings"
+	"mimod/util/auxiliar"
 )
 
 func AgregarTarea(lista []models.Tarea) []models.Tarea {
 
-	//Instancia para leer la entrada del usuario
-	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Ingrese el título de la tarea:")
+	title, err := auxiliar.ObtenerEntrada()
+	if err != nil {
+		fmt.Println("Error:", err)
+		return lista
+	}
 
-	fmt.Println("Ingrese el título de la tarea: ")
-
-	//Lee la entrada del usuario
-	title, _ := reader.ReadString('\n')
-
-	//Quita los espacios vacíos de la entrada
-	title = strings.TrimSpace(title)
-
-	fmt.Println("Ingrese una descripción: ")
-
-	//Lee la entrada del usuario
-	description, _ := reader.ReadString('\n')
-
-	//Quita los espacios de la entrada
-	description = strings.TrimSpace(description)
+	fmt.Println("Ingrese una descripción:")
+	description, err := auxiliar.ObtenerEntrada()
+	if err != nil {
+		fmt.Println("Error:", err)
+		return lista
+	}
 
 	//Crea una instancia de tarea
 	nuevaTarea := models.Tarea{
