@@ -14,10 +14,11 @@ func main() {
 	//cargar la lista de tareas desde el json que actua como bd
 	util.TareasDesdeJson(&tareas)
 
+	util.ListarTareas(tareas)
+
 	//Itera hasta la opción de salida.
 	for {
 
-		util.ListarTareas(tareas)
 		opcion := util.Menu()
 
 		switch opcion {
