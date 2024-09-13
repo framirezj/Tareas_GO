@@ -1,0 +1,6 @@
+Razón para guardar y restaurar el estado de os.Stdin
+Interferencia en las pruebas: Durante las pruebas, si rediriges os.Stdin (por ejemplo, para simular entrada del usuario) y no restauras su estado original, puedes interferir con otros tests o con el entorno global. Esto puede llevar a fallos en pruebas que dependen de os.Stdin en su estado original.
+
+Aislamiento de pruebas: Para garantizar que cada prueba sea independiente y no afecte a otras pruebas, es importante que cualquier cambio en os.Stdin se revierta después de que la prueba haya terminado.
+
+Pruebas deterministas: Al restaurar el estado original, te aseguras de que las pruebas sean consistentes y reproducibles. Los cambios en la entrada estándar pueden afectar los resultados de las pruebas si no se gestionan adecuadamente.
