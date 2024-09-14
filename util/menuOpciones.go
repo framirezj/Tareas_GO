@@ -18,11 +18,10 @@ func Menu() int {
 Menú:
 1. Agregar Tarea
 2. Listar Tareas
-3. Marcar Tarea Completada
+3. Marcar Tarea como completada
 4. Remover Tarea
 5. Actualizar Tarea
-6. Exporta las Tareas a Json
-7. Salir
+6. Salir
 Seleccione una opción:`)
 
 	//leer la entrada de usuario
