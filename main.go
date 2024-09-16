@@ -37,10 +37,9 @@ func main() {
 			return
 		default:
 			fmt.Println("Opción inválida")
-			return
+
 		}
 
-		util.TareasAJson(tareas)
 	}
 
 }
