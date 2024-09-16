@@ -31,7 +31,7 @@ func main() {
 		case 4:
 			tareas = util.RemoverTarea(tareas)
 		case 5:
-			util.EditarTarea(tareas)
+			util.ActualizarTarea(tareas)
 		case 6:
 			fmt.Println("Hasta pronto!")
 			return
