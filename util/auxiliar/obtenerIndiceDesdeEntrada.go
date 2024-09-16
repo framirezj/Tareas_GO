@@ -13,7 +13,7 @@ func ObtenerIndiceDesdeEntrada() (int, error) {
 	//Instancia para leer la entrada del usuario
 	reader := bufio.NewReader(os.Stdin)
 
-	fmt.Println("Ingresa el índice de la tarea completada: ")
+	fmt.Println("Ingresa el índice de la tarea: ")
 
 	//Lee la entrada del usuario
 	entrada, err := reader.ReadString('\n')
